@@ -1,0 +1,17 @@
+VidChapters/pretrained
+VidChapters/attentions
+VidChapters/checkpoints
+VidChapters/data
+VidChapters/*.pth
+__pycache__
+
+VTimeLLM/checkpoints
+VTimeLLM/data
+VTimeLLM/output
+VideoLLAMA2/outputs
+VideoLLAMA2/data
+VideoLLAMA2/checkpoints
+outputs
+outputs_videollama
+
+.idea/
