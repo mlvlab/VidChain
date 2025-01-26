@@ -3,14 +3,20 @@
 <p align="center">
   <h1 align="center">VidChain: Chain-of-Tasks with Metric-based Direct Preference Optimization for Dense Video Captioning</h1>
   
-  <p align="center">Ji Soo Lee*, Jongha Kim*, Jeehye Na, Jinyoung Park, Hyunwoo J. Kim†.
+<p align="center">Ji Soo Lee*, Jongha Kim*, Jeehye Na, Jinyoung Park, Hyunwoo J. Kim†.
   </p>
-  <h2 align="center">AAAI 2025</h2>
 
-This is the official implementation (pytorch) of VidChain, a novel framework for Dense Video Captioning with VideoLLMs, which composes of Chain-of-Tasks and Metric-based Direct Preference Optimization.
+  <h2 align="center">
+    AAAI 2025 
+  </h2>
 
   <h3 align="center">
+    <a href="https://arxiv.org/pdf/2501.06761" target='_blank'><img src="https://img.shields.io/badge/arXiv-2501.06761-b31b1b.svg"></a>
+    <a href="https://huggingface.co/datasets/simplecloud/VidChain-Data"><img src="https://img.shields.io/badge/huggingface-datasets-yellow"></a>
   </h3>
+
+  
+This is the official implementation (pytorch) of VidChain, a novel framework for Dense Video Captioning with VideoLLMs, which composes of Chain-of-Tasks and Metric-based Direct Preference Optimization. 
 
 </p>
 
@@ -42,7 +48,7 @@ pip install flash-attn==2.5.7 --no-build-isolation
 ### 3. Download the pre-trained checkpoints from [link](https://github.com/DAMO-NLP-SG/VideoLLaMA2?tab=readme-ov-file#earth_americas-model-zoo).
 
 ### 4. Download our checkpoints from [huggingface](https://huggingface.co/datasets/simplecloud/VidChain-Data).
-- We provide the pre-extracted features of VideoLLaMA2/VTimeLLM for both ActivityNet and YouCook2. Note that the pre-extracted features of VideoLLaMA2 is about ⚠️ 322GB, please be aware of the storage space.
+- We provide the pre-extracted features of VideoLLaMA2/VTimeLLM for both ActivityNet and YouCook2. Note that the pre-extracted features of VideoLLaMA2 is about ⚠️ 301GB (act) and 32GB (yc2), please be aware of the storage space.
 - We also provide the log results for each checkpoint.
 - stage 4 corresponds to CoTasks, stage 5 corresponds to M-DPO
 
@@ -258,3 +264,17 @@ bash script/build/generate-build-act-vtimellm.sh # Evaluation
 python script/build/concat.py # Build training data for M-DPO
 ```
 - Note that the evaluation script for the generated samples is based on VideoLLaMA2 codebase, so you need to set `vtimellm=True` and pass `--vtimellm` to the script.
+
+
+<br>
+
+## Citations 🌱
+
+```
+@inproceedings{lee2025vidchain,
+  title={VidChain: Chain-of-Tasks with Metric-based Direct Preference Optimization for Dense Video Captioning},
+  author={Lee, Ji Soo and Kim, Jongha and Na, Jeehye and Park, Jinyoung and Kim, Hyunwoo J},
+  booktitle={AAAI},
+  year={2025}
+}
+```
